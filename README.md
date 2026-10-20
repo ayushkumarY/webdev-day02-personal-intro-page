@@ -1,5 +1,7 @@
 # Day 2: HTML Foundations — Personal Introduction
 
+<img width="1252" height="855" alt="image" src="https://github.com/user-attachments/assets/9dd7c968-fc34-4f2e-a817-2b1bb0273984" />
+
 This example is a small personal introduction page that can grow into a resume-style page. Open `index.html` in a browser and read the source alongside the page.
 
 ## Learning goals
