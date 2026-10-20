@@ -17,9 +17,9 @@ By the end of this practice, you should be able to:
 
 - `index.html` is the working reference page. The name, course, education details, skills, and interests are fictional examples. Replace them with your own details when you make your version.
 - The document starts with the HTML doctype, language, character encoding, responsive viewport, and page title.
-- The page uses headings and paragraphs for readable content, `strong` for important text, and `br` for a line break within the education entry.
+- The page uses headings and paragraphs for readable content, `strong` for emphasis, and nested `div` elements to group related education facts.
 - Semantic elements show the role of each page area. The `id` values identify sections, while `data-section` demonstrates a custom data attribute.
-- A small style block is included so you can see the structure clearly. Focus on understanding the HTML first; the page content should still make sense without the styling.
+- `style.css` contains the page design, linked from `index.html`. Its numbered comments group the rules into page defaults, the introduction banner, content cards, and mobile layout. Try changing a color or spacing value and refresh the page to see the result.
 
 ## Build in class
 
@@ -70,5 +70,4 @@ Use this page as a **reference for structure and learning**, then create your ow
 ## Run the example
 
 No installation is needed. Open `index.html` in any modern web browser. To edit it, use a code editor such as VS Code.
-
 
