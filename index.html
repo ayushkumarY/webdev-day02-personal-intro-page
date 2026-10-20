@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A student introduction page built with HTML foundations.">
+  <title>Alex Morgan — Student &amp; Future Developer</title>
+  <style>
+    :root {
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: #17233b;
+      background: #f3f6fb;
+      font-synthesis: none;
+      text-rendering: optimizeLegibility;
+      --blue: #315de8;
+      --muted: #66738a;
+      --line: #e7ebf3;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; min-height: 100vh; padding: 48px 22px; }
+    .page { max-width: 980px; margin: 0 auto; }
+    .topline { display: flex; align-items: center; justify-content: space-between; margin-bottom: 18px; color: var(--muted); font-size: .78rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+    .topline span:last-child { color: var(--blue); }
+    .hero { position: relative; overflow: hidden; display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 30px; padding: 54px 58px; color: white; background: linear-gradient(125deg, #172b59 0%, #264ba8 58%, #4775f5 100%); border-radius: 24px; box-shadow: 0 22px 55px #203b781f; }
+    .hero::after { content: ""; position: absolute; width: 320px; height: 320px; right: 100px; top: -220px; border: 1px solid #ffffff24; border-radius: 50%; box-shadow: 0 0 0 35px #ffffff0a, 0 0 0 70px #ffffff08; }
+    .hero-copy, .avatar { position: relative; z-index: 1; }
+    .eyebrow { margin: 0 0 15px; color: #c5d4ff; font-size: .78rem; font-weight: 750; letter-spacing: .14em; text-transform: uppercase; }
+    h1 { max-width: 620px; margin: 0; font-size: clamp(2.5rem, 6vw, 4.1rem); line-height: 1.02; letter-spacing: -.055em; }
+    .hero-copy > p:last-child { margin: 19px 0 0; color: #e1e9ff; font-size: 1.08rem; }
+    .avatar { display: grid; place-items: center; width: 132px; aspect-ratio: 1; border: 1px solid #ffffff70; border-radius: 50%; background: #ffffff1c; color: white; font-size: 2.4rem; font-weight: 750; letter-spacing: -.06em; box-shadow: inset 0 0 30px #ffffff12; }
+    main { display: grid; grid-template-columns: 1.25fr .75fr; gap: 18px; margin-top: 20px; }
+    .card { padding: 27px 29px; border: 1px solid var(--line); border-radius: 18px; background: white; box-shadow: 0 8px 24px #1b31500a; }
+    .about { grid-row: span 2; }
+    .card-label { margin: 0 0 8px; color: var(--blue); font-size: .72rem; font-weight: 750; letter-spacing: .12em; text-transform: uppercase; }
+    h2 { margin: 0 0 12px; color: #1a2946; font-size: 1.28rem; letter-spacing: -.025em; }
+    .card p { margin: 0; color: var(--muted); line-height: 1.75; }
+    .card p + p { margin-top: 12px; }
+    strong { color: #263b68; }
+    .facts { display: grid; gap: 12px; margin-top: 16px; }
+    .fact { display: flex; justify-content: space-between; gap: 14px; padding-top: 12px; border-top: 1px solid var(--line); color: var(--muted); font-size: .9rem; }
+    .fact strong { text-align: right; }
+    .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+    .chips span { padding: 7px 11px; border: 1px solid #e3eaff; border-radius: 999px; background: #f5f7ff; color: #3453a4; font-size: .82rem; font-weight: 650; }
+    footer { display: flex; justify-content: space-between; gap: 12px; margin-top: 20px; padding: 0 4px; color: #8490a4; font-size: .82rem; }
+    @media (max-width: 680px) {
+      body { padding: 24px 15px; }
+      .hero { grid-template-columns: 1fr; gap: 24px; padding: 36px 28px; border-radius: 20px; }
+      .avatar { grid-row: 1; width: 82px; font-size: 1.6rem; }
+      main { grid-template-columns: 1fr; }
+      .about { grid-row: auto; }
+      .card { padding: 23px; }
+      footer { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="topline">
+      <span>Personal profile · 2026</span>
+      <span>Web development / 01</span>
+    </div>
+
+    <header class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Hello, I’m</p>
+        <h1>Alex Morgan<span aria-hidden="true">.</span></h1>
+        <p>Computer science student learning to build thoughtful things for the web.</p>
+      </div>
+      <div class="avatar" aria-label="Alex Morgan initials">AM</div>
+    </header>
+
+    <main>
+      <section class="card about" id="about" data-section="profile">
+        <p class="card-label">A little about me</p>
+        <h2>Curious by nature. Building step by step.</h2>
+        <p>I’m a first-year student who enjoys understanding how things work and turning ideas into useful projects. Right now, I’m learning the building blocks of the web and practising by making something new each week.</p>
+        <p>I believe good work comes from staying curious, asking questions, and being willing to try again when the first attempt doesn’t work.</p>
+      </section>
+
+      <section class="card" id="education" data-section="background">
+        <p class="card-label">The journey so far</p>
+        <h2>Education</h2>
+        <p><strong>B.Tech · Computer Science</strong></p>
+        <div class="facts">
+          <div class="fact"><span>Institute</span><strong>Example Institute</strong></div>
+          <div class="fact"><span>Expected graduation</span><strong>2030</strong></div>
+        </div>
+      </section>
+
+      <section class="card" id="skills" data-section="strengths">
+        <p class="card-label">Things I’m practising</p>
+        <h2>Skills &amp; interests</h2>
+        <p>I’m building a foundation in:</p>
+        <div class="chips" aria-label="Skills">
+          <span>HTML</span><span>Problem solving</span><span>Teamwork</span><span>Design</span>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <span>Made with curiosity and a little bit of HTML.</span>
+      <span>Personal introduction · Day 2</span>
+    </footer>
+  </div>
+</body>
+</html>
