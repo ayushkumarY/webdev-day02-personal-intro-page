@@ -1,74 +1,47 @@
-/* 1. Set up shared colors and page defaults. */
+/* Page colors and fonts. Change these values to try a new look. */
 :root {
   font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   color: #17233b;
   background: #f3f6fb;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
-
-  --blue: #315de8;
-  --muted: #66738a;
-  --line: #e7ebf3;
 }
 
-* {
-  box-sizing: border-box;
-}
-
+/* Basic spacing for the whole page. */
 body {
   min-height: 100vh;
   margin: 0;
   padding: 48px 22px;
 }
 
-/* 2. Keep the page centered and give it a small heading. */
 .page {
   max-width: 980px;
   margin: 0 auto;
 }
 
+/* Small heading above the introduction banner. */
 .topline {
   display: flex;
   align-items: center;
   margin-bottom: 18px;
-  color: var(--muted);
+  color: #66738a;
   font-size: 0.78rem;
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
 }
 
-/* 3. Style the large introduction banner. */
+/* Main banner with the student's name and introduction. */
 .hero {
-  position: relative;
   display: grid;
   grid-template-columns: 1fr auto;
   align-items: center;
   gap: 30px;
-  overflow: hidden;
   padding: 54px 58px;
   border-radius: 24px;
-  background: linear-gradient(125deg, #172b59 0%, #264ba8 58%, #4775f5 100%);
+  background: linear-gradient(125deg, #172b59, #264ba8, #4775f5);
   box-shadow: 0 22px 55px #203b781f;
   color: white;
-}
-
-.hero::after {
-  position: absolute;
-  top: -220px;
-  right: 100px;
-  width: 320px;
-  height: 320px;
-  border: 1px solid #ffffff24;
-  border-radius: 50%;
-  box-shadow: 0 0 0 35px #ffffff0a, 0 0 0 70px #ffffff08;
-  content: "";
-}
-
-.hero-copy,
-.avatar {
-  position: relative;
-  z-index: 1;
 }
 
 .eyebrow {
@@ -80,20 +53,20 @@ body {
   text-transform: uppercase;
 }
 
-h1 {
-  max-width: 620px;
+.hero-title {
   margin: 0;
   font-size: clamp(2.5rem, 6vw, 4.1rem);
   line-height: 1.02;
   letter-spacing: -0.055em;
 }
 
-.hero-copy > p:last-child {
+.hero-description {
   margin: 19px 0 0;
   color: #e1e9ff;
   font-size: 1.08rem;
 }
 
+/* Circle with the student's initials. */
 .avatar {
   display: grid;
   width: 132px;
@@ -109,7 +82,7 @@ h1 {
   letter-spacing: -0.06em;
 }
 
-/* 4. Arrange the profile sections as simple cards. */
+/* Two-column layout for the profile cards. */
 main {
   display: grid;
   grid-template-columns: 1.25fr 0.75fr;
@@ -117,9 +90,10 @@ main {
   margin-top: 20px;
 }
 
+/* Shared appearance for each content card. */
 .card {
   padding: 27px 29px;
-  border: 1px solid var(--line);
+  border: 1px solid #e7ebf3;
   border-radius: 18px;
   background: white;
   box-shadow: 0 8px 24px #1b31500a;
@@ -131,35 +105,38 @@ main {
 
 .card-label {
   margin: 0 0 8px;
-  color: var(--blue);
+  color: #315de8;
   font-size: 0.72rem;
   font-weight: 750;
   letter-spacing: 0.12em;
   text-transform: uppercase;
 }
 
-h2 {
+.card-title {
   margin: 0 0 12px;
   color: #1a2946;
   font-size: 1.28rem;
   letter-spacing: -0.025em;
 }
 
-.card p {
+.card-text {
   margin: 0;
-  color: var(--muted);
+  color: #66738a;
   line-height: 1.75;
 }
 
-.card p + p {
+/* Add space before the second paragraph in the About card. */
+.card-text-spaced {
   margin-top: 12px;
 }
 
-strong {
+.degree {
+  margin: 0;
   color: #263b68;
+  font-weight: 700;
 }
 
-/* 5. Give education facts and skills their own small treatments. */
+/* Education details are shown as label-and-value rows. */
 .facts {
   display: grid;
   gap: 12px;
@@ -171,15 +148,20 @@ strong {
   justify-content: space-between;
   gap: 14px;
   padding-top: 12px;
-  border-top: 1px solid var(--line);
-  color: var(--muted);
+  border-top: 1px solid #e7ebf3;
   font-size: 0.9rem;
 }
 
-.fact strong {
+.fact-label {
+  color: #66738a;
+}
+
+.fact-value {
+  color: #263b68;
   text-align: right;
 }
 
+/* Skill chips wrap onto another line when needed. */
 .chips {
   display: flex;
   flex-wrap: wrap;
@@ -187,7 +169,7 @@ strong {
   margin-top: 16px;
 }
 
-.chips span {
+.chip {
   padding: 7px 11px;
   border: 1px solid #e3eaff;
   border-radius: 999px;
@@ -197,6 +179,7 @@ strong {
   font-weight: 650;
 }
 
+/* Short note at the bottom of the page. */
 footer {
   margin-top: 20px;
   padding: 0 4px;
@@ -204,7 +187,7 @@ footer {
   font-size: 0.82rem;
 }
 
-/* 6. Stack the content on smaller screens. */
+/* On a phone, stack the banner and cards vertically. */
 @media (max-width: 680px) {
   body {
     padding: 24px 15px;

@@ -16,8 +16,8 @@
     <header class="hero">
       <div class="hero-copy">
         <p class="eyebrow">Hello, I’m</p>
-        <h1>Alex Morgan<span aria-hidden="true">.</span></h1>
-        <p>Computer science student learning to build thoughtful things for the web.</p>
+        <h1 class="hero-title">Alex Morgan<span aria-hidden="true">.</span></h1>
+        <p class="hero-description">Computer science student learning to build thoughtful things for the web.</p>
       </div>
       <div class="avatar" aria-label="Alex Morgan initials">AM</div>
     </header>
@@ -25,30 +25,36 @@
     <main>
       <section class="card about" id="about" data-section="profile">
         <p class="card-label">A little about me</p>
-        <h2>Curious by nature. Building step by step.</h2>
-        <p>I’m a first-year student who enjoys understanding how things work and turning ideas into useful projects. Right now, I’m learning the building blocks of the web and practising by making something new each week.</p>
-        <p>I believe good work comes from staying curious, asking questions, and being willing to try again when the first attempt doesn’t work.</p>
+        <h2 class="card-title">Curious by nature. Building step by step.</h2>
+        <p class="card-text">I’m a first-year student who enjoys understanding how things work and turning ideas into useful projects. Right now, I’m learning the building blocks of the web and practising by making something new each week.</p>
+        <p class="card-text card-text-spaced">I believe good work comes from staying curious, asking questions, and being willing to try again when the first attempt doesn’t work.</p>
       </section>
 
       <section class="card" id="education" data-section="background">
         <p class="card-label">The journey so far</p>
-        <h2>Education</h2>
-        <p><strong>B.Tech · Computer Science</strong></p>
+        <h2 class="card-title">Education</h2>
+        <p class="degree">B.Tech · Computer Science</p>
         <div class="facts">
-          <div class="fact"><span>Institute</span><strong>Example Institute</strong></div>
-          <div class="fact"><span>Expected graduation</span><strong>2030</strong></div>
+          <div class="fact">
+            <span class="fact-label">Institute</span>
+            <strong class="fact-value">Example Institute</strong>
+          </div>
+          <div class="fact">
+            <span class="fact-label">Expected graduation</span>
+            <strong class="fact-value">2030</strong>
+          </div>
         </div>
       </section>
 
       <section class="card" id="skills" data-section="strengths">
         <p class="card-label">Things I’m practising</p>
-        <h2>Skills &amp; interests</h2>
-        <p>I’m building a foundation in:</p>
+        <h2 class="card-title">Skills &amp; interests</h2>
+        <p class="card-text">I’m building a foundation in:</p>
         <div class="chips" aria-label="Skills">
-          <span>HTML</span>
-          <span>Problem solving</span>
-          <span>Teamwork</span>
-          <span>Design</span>
+          <span class="chip">HTML</span>
+          <span class="chip">Problem solving</span>
+          <span class="chip">Teamwork</span>
+          <span class="chip">Design</span>
         </div>
       </section>
     </main>
