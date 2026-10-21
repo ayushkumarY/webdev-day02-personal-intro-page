@@ -43,9 +43,9 @@ Use this page as a **reference for structure and learning**, then create your ow
 
 1. Create a new GitHub repository with this exact name pattern:
 
-   `rollno-firstname-webdev-day01-setup-practice`
+   `rollno-firstname-webdev-day02-personal-intro-page`
 
-   Replace `rollno` with your roll number and `firstname` with your first name, in lowercase. For example: `23-anaya-webdev-day01-setup-practice`.
+   Replace `rollno` with your roll number and `firstname` with your first name, in lowercase. For example: `23-anaya-webdev-day02-personal-intro-page`.
 2. Create an `index.html` containing a valid HTML document structure and a clear page title.
 3. Include a personal introduction and at least three useful sections, such as About, Education, Skills, Goals, or Interests.
 4. Use headings and paragraphs appropriately. Include examples of `strong` or `em`, and use semantic containers such as `header`, `main`, `section`, and `footer`.
